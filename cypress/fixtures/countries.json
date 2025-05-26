@@ -1,0 +1,28 @@
+[
+  {
+    "name": {
+      "common": "United States",
+      "official": "United States of America"
+    },
+    "capital": ["Washington, D.C."],
+    "currencies": {
+      "USD": {
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    }
+  },
+  {
+    "name": {
+      "common": "Canada",
+      "official": "Canada"
+    },
+    "capital": ["Ottawa"],
+    "currencies": {
+      "CAD": {
+        "name": "Canadian dollar",
+        "symbol": "$"
+      }
+    }
+  }
+]

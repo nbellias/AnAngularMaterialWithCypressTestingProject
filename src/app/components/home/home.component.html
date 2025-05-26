@@ -1,0 +1,24 @@
+<h3>Home</h3>
+<div class="country-selector-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Select a country</mat-label>
+    <mat-select [(ngModel)]="selectedCountry" (selectionChange)="onCountrySelected($event.value)">
+      @for (country of countries; track country.name.common) {
+        <mat-option [value]="country">{{ country.name.common }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  @if (isLoading) {
+    <div class="loading">Loading countries...</div>
+  }
+
+  @if (selectedCountry && !isLoading) {
+    <div class="country-details">
+      <h3>{{ selectedCountry.name.official }}</h3>
+      <p><strong>Common Name:</strong> {{ selectedCountry.name.common }}</p>
+      <p><strong>Capital:</strong> {{ selectedCountry.capital.join(', ') || 'No capital data' }}</p>
+      <p><strong>Currencies:</strong> {{ getCurrencyNames() }}</p>
+    </div>
+  }
+</div>

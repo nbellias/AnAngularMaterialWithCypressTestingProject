@@ -1,0 +1,47 @@
+/* Fixed footer at the bottom */
+mat-toolbar.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #616161 !important; /* Gray color */
+  color: white !important;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer content container */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Footer links */
+.footer-links {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 5px;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Copyright text */
+.copyright {
+  font-size: 10px;
+  opacity: 0.8;
+}
